@@ -1,0 +1,159 @@
+/*font-family: 'VT323', monospace;*/
+
+:root {
+    --font-Family: 'Teko', sans-serif;
+    --color-text-primary: #f3f3f3;
+    --color-text-secondary: #B8BBC5;
+    --background-color: rgba(3, 2, 7, 0.8);
+    --border-color: #00b2df;
+    --hover-abas: rgba(3, 2, 7, 1);
+    --background-color-abas: rgba(38, 38, 38, 0.5);
+
+}
+
+body {
+    background-image: url(../imagens/fuundo-mancha-blue-pink.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+
+    font-family: var(--font-Family);
+    color: var(--color-text-primary);
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.cartao {
+    background-color: var(--background-color);
+    width: 23.75rem; /*380px*/
+    border: 3px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.abas img {
+    width: 1.875rem; /*30px*/
+}
+
+.cartao .minhas-informacoes {
+    padding-top: 1.25rem; /*20px*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*alinha horizontalmente por causa do flex direction column*/
+    gap: 0.938rem; /*10px*/
+}
+
+.cartao .minhas-informacoes img {
+    border-radius: 80px;
+    border: 4px solid var(--border-color);
+}
+
+.cartao .minhas-informacoes .nome {
+    font-family: 'Teko', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.cartao .minhas-informacoes .cargo {
+    font-size: 1.375rem; /* 22px*/
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.cartao .conteudo {
+    margin-top: 0.938rem; /*15px*/
+}
+.cartao .conteudo .abas {
+    display: flex;
+}
+
+.cartao .abas .aba {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0; /*8px*/
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cartao .abas .aba img {
+    width: 2.188rem; /*35px*/
+}
+
+.cartao .abas .aba.selecionada {
+    background-color: var(--background-color-abas);
+}
+
+.cartao .informacoes-abas{
+    background-color: var(--background-color-abas);
+}
+
+.cartao .abas .aba:hover {
+    background-color: var(--hover-abas);
+}
+
+.informacoes-abas .informacao {
+    min-height: 16.25rem; /*260px*/
+    padding: 0.938rem; /*15px*/
+    display: none;
+}
+
+.informacoes-abas .informacao.selecionada {
+    display: block;
+}
+
+.informacoes-abas .sub-titulo {
+    font-size: 1.375rem; /*22px*/
+    margin-bottom: 1.563rem; /*25px*/ 
+    text-align: center;
+    font-weight: 500;
+}
+
+.informacoes-abas .descricao {
+    font-size: 1.25rem; /* 20px*/
+    max-height: 11.25rem; /*180px*/
+    overflow-y: auto;
+    text-indent: 10%;
+    text-align: justify;
+    font-weight: 200;
+}
+
+.informacoes-abas .descricao p {
+    max-width: 19.375rem; /*310px*/
+}
+
+.informacoes-abas .descricao span {
+    color: var(--border-color);
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; /* 20px*/
+}
+
+.informacao h3 {
+    font-size: 1.563rem; /*25px*/ 
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1.563rem; /*25px*/ 
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--background-color);
+    border-radius: 20px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 20px;
+    border: 3px solid var(--background-color);
+  }
